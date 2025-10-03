@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  serveur-dev:
+    build:
+      context: ./dev
+    container_name: serveur-dev
+    ports:
+      - "2222:22"   # SSH
+    tty: true
+
+  serveur-prod:
+    build:
+      context: ./prod
+    container_name: serveur-prod
+    ports:
+      - "2200:22"   # SSH
+    tty: true

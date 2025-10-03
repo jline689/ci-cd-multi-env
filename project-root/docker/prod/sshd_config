@@ -1,0 +1,7 @@
+cd docker
+docker compose up -d --build
+docker ps --format "table {{.Names}}\t{{.Ports}}"
+# Attendu :
+# NAMES         PORTS
+# serveur-dev   0.0.0.0:2222->22/tcp
+# serveur-prod  0.0.0.0:2200->22/tcp
